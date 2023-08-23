@@ -8,7 +8,6 @@ import (
 
 //go:genarate echo "test genarate"
 func main() {
-
 	fmt.Println(hello.Hello())
 
 	var aa byte
@@ -16,6 +15,8 @@ func main() {
 	aa = 12
 	unsafemod.SetVal(&aa)
 
+	i := 20
+	ret := unsafemod.RetSizeOf(i)
+	fmt.Println(ret)
 	fmt.Println(aa)
-
 }
