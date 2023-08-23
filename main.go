@@ -17,4 +17,5 @@ func main() {
 	unsafemod.SetVal(&aa)
 
 	fmt.Println(aa)
+
 }
