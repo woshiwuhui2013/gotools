@@ -18,5 +18,4 @@ func main() {
 	i := 20
 	ret := unsafemod.RetSizeOf(i)
 	fmt.Println(ret)
-	fmt.Println(aa)
 }
