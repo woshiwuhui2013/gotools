@@ -10,10 +10,10 @@ func SetVal(elem *byte) {
 }
 
 type Foo struct {
-	a int
-	b string
-	c [10]int
-	d float64
+	A int
+	B string
+	C [2]int
+	D float64
 }
 
 func RetSizeOf(value int) uintptr {
@@ -22,4 +22,14 @@ func RetSizeOf(value int) uintptr {
 	var foo Foo
 	fmt.Println(unsafe.Sizeof(foo))
 	return unsafe.Sizeof(i)
+}
+
+func PointTo(foo *Foo) {
+
+	p := unsafe.Pointer(foo)
+
+	var a = (*int)(p)
+
+	fmt.Println(*a)
+
 }
