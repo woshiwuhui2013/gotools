@@ -33,3 +33,9 @@ func PointTo(foo *Foo) {
 	fmt.Println(*a)
 
 }
+
+func UintptrHandler() {
+	foo := Foo{A: 1, B: "hhhh", C: [2]int{3, 5}, D: 1.1}
+	a := uintptr(unsafe.Pointer(&foo))
+	fmt.Println("x%", a)
+}

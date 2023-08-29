@@ -23,4 +23,6 @@ func main() {
 
 	unsafemod.PointTo(&foo)
 
+	unsafemod.UintptrHandler()
+
 }
