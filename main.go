@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	hello "github.com/woshiwuhui2013/gotools/hello"
+	"github.com/woshiwuhui2013/gotools/myreflect"
 	"github.com/woshiwuhui2013/gotools/unsafemod"
 )
 
@@ -24,5 +25,6 @@ func main() {
 	unsafemod.PointTo(&foo)
 
 	unsafemod.UintptrHandler()
+	myreflect.UseCase()
 
 }
