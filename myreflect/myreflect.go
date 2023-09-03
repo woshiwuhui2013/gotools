@@ -16,6 +16,9 @@ func UseCase() {
 	i = 20
 	rtype := reflect.TypeOf(i)
 	fmt.Println(rtype.Name())
+	v := reflect.ValueOf(i)
+	iv := v.Interface()
+	fmt.Println("iv", iv)
 
 	funval := reflect.ValueOf(add)
 
