@@ -30,3 +30,20 @@ func UseCase() {
 	fmt.Println("z {}", z[0].Int())
 
 }
+
+func ParseStu(itf interface{})  {
+	reflectVal := reflect.ValueOf(itf)
+	reflectType := reflect.TypeOf(itf)
+
+	for i := 0; i < reflectType.NumField(); i++ {
+		val := reflectVal.Field(i)
+		sttype := reflectType.Field(i)
+
+		fmt.Println("name ", sttype.Name)
+		fmt.Println("type ", sttype.Type)
+
+		fmt.Println("val ", val.Interface())
+
+	}
+
+}

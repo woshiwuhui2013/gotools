@@ -26,5 +26,6 @@ func main() {
 
 	unsafemod.UintptrHandler()
 	myreflect.UseCase()
+	myreflect.ParseStu(foo)
 
 }
